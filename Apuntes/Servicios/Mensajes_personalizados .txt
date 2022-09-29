@@ -9,5 +9,14 @@ FIXME: Pasos iniciales para crear un mensaje
         2- En la funcion add_service_files añadimos el nombre del archivo de mensaje
         3- En la funcion generate_messages, la descomentamos y añadimos las dependencias del archivo
         4- En la funcion catkin_package añadimos rospy y message_runtime en la linea de CATKIN_DEPENDS
-    4. Compilamos el paquete con catkin_make
-
+    
+    4. .Modificar package.xml
+        1-En el final de linea completamos las lineas que faltan para que coincidan con las siguiente lineas:
+            <build_depend> rospy </build_depend>
+            <build_depend> message_generation </build_depend>
+            <build_export_depend> rospy </build_export_depend>
+            <build_export_depend> message_rutine </build_export_depend>
+            <exec_depend> rospy </exec_depend>
+            <exec_depend> message_rutine </exec_depend>
+    5.Compilar el paquete ejecutando el comando catkin_make --only_pkg_with_deps nombre_del_paquete dentro de la carpeta catkin_ws
+    

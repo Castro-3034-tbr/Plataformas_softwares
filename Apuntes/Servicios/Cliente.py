@@ -5,7 +5,7 @@ TODO: Creacion de un cliente para un servicio
 
 #!/usr/bin/env python
 import rospy
-from Servidor import Mensaje.srv
+from paquete.srv import Mensaje, MensajeRequest
 
 rospy.init_node('cliente_servicio')
 rospy.wait_for_service('/servicio')#Espera asta que el servicio se este ejecutando para ofrecer el servicio

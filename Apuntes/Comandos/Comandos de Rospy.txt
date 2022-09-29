@@ -23,3 +23,13 @@ FIXME: Bucles
     Rate(10) -> Bucle de ejecucion con una frecuencia indicada
     is_shutdown() -> Comprueba si el nodo esta apagado (Se ponen en un bucle para romper el bucle)
     rate.sleep() -> Espera a que se cumpla el tiempo de la frecuencia
+
+FIXME: Servicios
+    Servidores
+        Service("nombre", Tipo de mensaje , callback) -> Creacion de un servidor
+
+    Clientes
+        wait_for_services("nombre") -> Espera a que el servidor este activos
+        ServiceProxy("nombre", Tipo de mensaje) -> Creacion de un cliente para un servicio
+        servicio(Mensaje) -> Envio del mensaje para el servicio
+        

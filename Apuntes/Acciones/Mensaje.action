@@ -1,0 +1,8 @@
+#goal 
+Int32 objetivo
+---
+#result
+int32 resultado
+---
+#feedback
+int32 retroalimentacion

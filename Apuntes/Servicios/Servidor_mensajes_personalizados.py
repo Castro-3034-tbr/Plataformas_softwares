@@ -10,7 +10,7 @@ def mi_callback(request):
     """
     Funcion que sera ejecutada cuando se llame al servicio mi_servicio
     """
-    
+    #Definimos el mensaje de respuesta y añadimos rellenamos el campo respuesta
     mi_respuesta = MiMensajeResponse()
     mi_respuesta.exito = True
     
