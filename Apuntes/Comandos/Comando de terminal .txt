@@ -1,0 +1,32 @@
+TODO: Comandos de terminal de ROS 
+
+FIXME: Commando de creacion de los paquetes
+    catkin_create_package "nombre del paquete" rospy -> Para crear un paquete de ROS en con la dependencia de rospy
+    catkin_make -> crea el workspace de ROS
+    catkin_ws -> compila el workspace
+
+FIXME: Comandos para moverse entre respotiorios
+    roscd -> nos cambia al directorio del paquete ROS
+
+FIXME: Comandos para ejecutar los nodos
+    roscore -> Inicia el nodo maestro de ROS
+    rosrun "nombre del paquete" "nombre del archivo" -> ejecuta un programa de Ros 
+
+FIXME: Comando para ver informacion 
+    rospack list -> Devuelve la lista de paquetes ROS 
+    rosnode list -> Devuelve la lista de nodos ROS
+    rosnode info "nombre del nodo" -> Devuelve la informacion del nodo 
+    rostopic list -> Para ver la lista de topics activos
+    rostopic echo "topic" -> Para ver el contenido de un topic
+    rostopic info "topic" -> Para ver la informacion de un topic
+
+FIXME: Comando para crear mensajes personalizados
+    rosmsg list -> Devuelve la lista de mensajes
+    rosmsg show "Nombre del mensaje" -> Devuelve la informacion de un mensaje
+    rosmsg list | grep Twist -> Devuelve la ruta de un mensaje en especifico 
+
+FIXME: Comando para crear servicios 
+    rosservice list -> Devuelve la lista de servicios
+    rosservice info "servicio" (Presionamos) TAB TAB -> Llama a un servicio
+    rossrv show "paquete/mensaje" -> Devuelve la informacion de los argumentos de un servicio
+    

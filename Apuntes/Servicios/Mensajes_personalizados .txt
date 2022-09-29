@@ -1,0 +1,13 @@
+TODO: Creacion e mensajes personalizados para servicios
+
+FIXME: Pasos iniciales para crear un mensaje 
+
+    1. Crear una carpeta srv en el paquete del servidor del servicio
+    2. Creamos y editamos el fichero "Nombre".srv 
+    3. Modificamos el CMlLists.txt para que se compile el servicio
+        1-En la funcion find package, la descomentamos y añadimos message_generation y añadimso las dependencias del archivo 
+        2- En la funcion add_service_files añadimos el nombre del archivo de mensaje
+        3- En la funcion generate_messages, la descomentamos y añadimos las dependencias del archivo
+        4- En la funcion catkin_package añadimos rospy y message_runtime en la linea de CATKIN_DEPENDS
+    4. Compilamos el paquete con catkin_make
+
