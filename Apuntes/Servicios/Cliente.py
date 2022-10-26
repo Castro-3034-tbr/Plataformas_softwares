@@ -7,17 +7,15 @@ TODO: Creacion de un cliente para un servicio
 import rospy
 from paquete.srv import Mensaje, MensajeRequest
 
-rospy.init_node('cliente_servicio')
-rospy.wait_for_service('/servicio')#Espera asta que el servicio se este ejecutando para ofrecer el servicio
+rospy.init_node('cliente_servicio') #Crea el topic
+rospy.wait_for_service('/nombre_servicio')#Espera asta que el servicio se este ejecutando para ofrecer el servicio
 
 #Se crea la conexion con el servicio
 servicio = rospy.ServiceProxy("/servicio", "nombre del servicio")
 
 #Se crea el objeto de "Tipo de mensaje" para enviarlo al servicio
 peticion = MensajeRequest()
-
-#Se asignan los datos a la peticion 
-peticion.dato = "dato"
+peticion.dato = "dato" #Asignacion de los datos a la peticion 
 
 #Se envia la peticion al servicio 
 resultado = servicio(peticion)

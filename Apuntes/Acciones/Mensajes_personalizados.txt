@@ -1,0 +1,21 @@
+TODO: Creacion de mensajes de Acciones personalizados
+
+    1. Creamos la carpeta msg
+    2.Creamos el achivo "nombre".action y añadimos los valores del mensaje
+    3.Modificaciones del CMakelists.txt
+        1- En la funcion find_package REQUIRED COMPONETS añadimos actionlib_msgs
+        2- En la funciion add_action_files añadimos el archivo "nombre".action
+        3- En la funcion generate_messages añadimos actionlib_msgs en la misma linea que std_msgs
+        4- Comprobamos la funcion catkin_package esta descomentada 
+        5- Comprobamos que la funcion include_directories esta descomentada
+    
+    4. Modificaciones del package.xml 
+        1- Añadimos las siguientes lineas
+            <build_depend>actionlib_msgs</build_depend>
+            <build_depend>actionlib_msgs</build_depend>
+            <build_export_depend>actionlib</build_export_depend>
+            <build_export_depend>actionlib_msgs</build_export_depend>
+            <exec_depend>actionlib</exec_depend>
+            <exec_depend>actionlib_msgs</exec_depend>
+    
+    5. Compilamos el paquete

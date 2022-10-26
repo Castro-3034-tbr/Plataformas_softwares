@@ -8,7 +8,7 @@ from std_msgs.msg import Int32
 
 rospy.init_node("Primer nodo") #Para crear un nodo
 
-pub = rospy.Publisher("laser", Int32, queue_size=10) #Para crear un topic y si existe el topic solo se conecta a el
+pub = rospy.Publisher("laser", Int32, queue_size=10,latch = True) #Para crear un topic y si existe el topic solo se conecta a el
 a = Int32() #Comfiguramos a como un mensaje de tipo Int32
 contador = 0 #Creamos una variable contador
 rate = rospy.Rate(10) #Para crear un rate de 10Hz

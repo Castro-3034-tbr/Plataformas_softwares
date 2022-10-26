@@ -12,21 +12,37 @@ FIXME: Comandos para ejecutar los nodos
     roscore -> Inicia el nodo maestro de ROS
     rosrun "nombre del paquete" "nombre del archivo" -> ejecuta un programa de Ros 
 
-FIXME: Comando para ver informacion 
+FIXME: Comando para paquetes 
     rospack list -> Devuelve la lista de paquetes ROS 
-    rosnode list -> Devuelve la lista de nodos ROS
-    rosnode info "nombre del nodo" -> Devuelve la informacion del nodo 
+    
+FIXME: Comandos para los topics
     rostopic list -> Para ver la lista de topics activos
     rostopic echo "topic" -> Para ver el contenido de un topic
     rostopic info "topic" -> Para ver la informacion de un topic
 
-FIXME: Comando para crear mensajes personalizados
+FIXME: Comandos para nodos
+    rosnode list -> Devuelve la lista de nodos ROS
+    rosnode info "nombre del nodo" -> Devuelve la informacion del nodo 
+    
+
+FIXME: Comando para mensajes personalizados
     rosmsg list -> Devuelve la lista de mensajes
     rosmsg show "Nombre del mensaje" -> Devuelve la informacion de un mensaje
     rosmsg list | grep Twist -> Devuelve la ruta de un mensaje en especifico 
 
-FIXME: Comando para crear servicios 
+FIXME: Comando para  servicios 
     rosservice list -> Devuelve la lista de servicios
     rosservice info "servicio" (Presionamos) TAB TAB -> Llama a un servicio
     rossrv show "paquete/mensaje" -> Devuelve la informacion de los argumentos de un servicio
-    
+
+FIXME: Comando para acciones
+    rostopic list -> Devuelve la lista de topics con los siguientes apartados 
+        * "accion"/cancel -> Cancela la accion
+        * "accion"/Feedback -> Muestra el feedback 
+        * "accion"/Goal -> Muestra el objetivo
+        * "accion"/Result -> Muestra el resultado
+        * "accion"/status -> Muestra el estado de la accion
+
+    rostopic pub "nombre_accion/accion" -> Ejecuta la accion
+    rostopic info "accion" -> Devuelve la informacion de una accion
+    rosmsg list | grep "accion" -> Muestra la lista de mensajes que empiezan con "accion"

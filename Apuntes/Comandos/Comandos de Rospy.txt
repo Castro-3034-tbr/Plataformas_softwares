@@ -10,7 +10,6 @@ FIXME: Topics
     Subscriber("nombre", Tipo de mensaje , callback) -> Creacion de un subscriber
 
 
-
 FIXME: Mensajes
     Tipos de mensajes : Int32,Int64, String
     
@@ -27,9 +26,8 @@ FIXME: Bucles
 FIXME: Servicios
     Servidores
         Service("nombre", Tipo de mensaje , callback) -> Creacion de un servidor
-
     Clientes
         wait_for_services("nombre") -> Espera a que el servidor este activos
         ServiceProxy("nombre", Tipo de mensaje) -> Creacion de un cliente para un servicio
         servicio(Mensaje) -> Envio del mensaje para el servicio
-        
+
