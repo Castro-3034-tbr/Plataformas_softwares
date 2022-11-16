@@ -1,0 +1,9 @@
+#Goal 
+turtlesim/Pose Objetivo
+---
+#Result
+bool Estado 
+float32 Diferencia
+---
+#Feedback
+float32 Distancia

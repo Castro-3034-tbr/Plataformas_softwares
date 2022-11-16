@@ -1,0 +1,7 @@
+#Peticion 
+turtlesim/Pose PosePresa
+turtlesim/Pose Objetivo
+---
+#Respuesta
+geometry_msgs/Twist VelocidadPresa
+float32 Distancia

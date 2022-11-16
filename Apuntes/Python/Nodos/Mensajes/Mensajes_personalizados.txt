@@ -1,0 +1,21 @@
+TODO:Creacion de mensajes personalizados para poder enviar informacion
+
+    1. Crear una carpeta msg en mi paquete
+    2.Generamos un archivo “nombre”.msg y añadimos las variables del mensaje
+    3.Modificar el archivo CMakeLists.txt
+        1-En la funcion find_package() dentro de ella escribimos "message_generation" y tambien añadimos los paquetes que use el mensaje creado (En lineas diferentes)
+        2-En la funcion add_message_files() la descomentamos y añadimos el nombre del archivo .msg que creamos (En lineas diferentes)
+        3-En la funcion generate_messages() la descomentamos y añadimos el nombre del los paquetes que usamos en el mensaje creado 
+        4-En la funcion catkin_package() la descomentamos y en la linea de CATKIN_DEPENDS añadimos rospy y message_rutine
+        5-Comprobamos si la funcion include_directories() esta descomentada y si  ${catkin_INCLUDE_DIRS} esta dentro de ella pero dejamos comentado include
+    
+    4.Modificar package.xml
+        1-En el final de linea completamos las lineas que faltan para que coincidan con las siguiente lineas:
+            <build_depend> rospy </build_depend>
+            <build_depend> message_generation </build_depend>
+            <build_export_depend> rospy </build_export_depend>
+            <build_export_depend> message_rutine </build_export_depend>
+            <exec_depend> rospy </exec_depend>
+            <exec_depend> message_rutine </exec_depend>
+    5.Compilar el paquete ejecutando el comando catkin_make --only_pkg_with_deps nombre_del_paquete dentro de la carpeta catkin_ws
+    

@@ -1,0 +1,33 @@
+TODO: Comandos de rospy
+
+FIXME: Nodos
+    init_node(" ") -> Creacion de un nodo
+
+FIXME: Topics
+    Publisher("nombre", Tipo de mensaje , queue_size=10) -> Creacion de un publisher
+    publish(mensaje) -> Publica el mensaje en el topic
+
+    Subscriber("nombre", Tipo de mensaje , callback) -> Creacion de un subscriber
+
+
+FIXME: Mensajes
+    Tipos de mensajes : Int32,Int64, String
+    
+    a = Int32() -> Creacion de un mensaje
+    a.data = 1 -> Asignacion de un valor al mensaje
+
+FIXME: Bucles
+    spin() -> Bucle de ejecucion infinito
+
+    Rate(10) -> Bucle de ejecucion con una frecuencia indicada
+    is_shutdown() -> Comprueba si el nodo esta apagado (Se ponen en un bucle para romper el bucle)
+    rate.sleep() -> Espera a que se cumpla el tiempo de la frecuencia
+
+FIXME: Servicios
+    Servidores
+        Service("nombre", Tipo de mensaje , callback) -> Creacion de un servidor
+    Clientes
+        wait_for_services("nombre") -> Espera a que el servidor este activos
+        ServiceProxy("nombre", Tipo de mensaje) -> Creacion de un cliente para un servicio
+        servicio(Mensaje) -> Envio del mensaje para el servicio
+

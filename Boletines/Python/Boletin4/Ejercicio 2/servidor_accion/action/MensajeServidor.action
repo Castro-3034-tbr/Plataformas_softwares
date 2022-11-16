@@ -1,0 +1,9 @@
+#Goal
+int32 ciclos_umbral
+---
+#Result
+int32 valor_final
+bool exito
+---
+#Feedback
+int32 contador

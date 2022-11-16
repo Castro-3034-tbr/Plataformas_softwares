@@ -1,0 +1,18 @@
+FIXME: Nodos 
+
+ros::init(argc, argv, "nombre"); --> Inicializa el nodo
+ros::NodeHandle nh;
+
+FIXME: Topics 
+
+ros::Publisher "nombre" = nh.advertise<"Tipo de mensajes">("nombre del publicador", "Tamaños de cola"); --> Crea un publicador
+"nombre".publish("mensaje"); --> Publica un mensaje
+
+FIXME: Mensajes
+"libreria_de_mensaje"::"tipo_de_mensaje" "nombre_del_mensaje"; --> Crea un mensaje
+
+FIXME: Bucles
+
+FIXME: Servicios
+
+FIXME: Acciones

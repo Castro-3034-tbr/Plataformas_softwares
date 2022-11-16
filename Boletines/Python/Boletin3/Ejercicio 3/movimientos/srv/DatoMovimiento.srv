@@ -1,0 +1,6 @@
+#Peticion
+float32 distancia 
+turtlesim/Pose pose_presa
+turtlesim/Pose pose_depredador
+---
+#Respuesta
