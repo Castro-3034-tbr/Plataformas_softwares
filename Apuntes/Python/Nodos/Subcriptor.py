@@ -11,7 +11,11 @@ def callback(msg):
     """
     print ( msg )
 
+
+#Creamos el nodo
 rospy.init_node('lectura')#Creamos el nodo
-rospy.Subscriber('laser', Int32, callback) #Nos suscribimos al topic laser
+
+#Nos subscribimos al topic
+rospy.Subscriber('laser', Int32, callback) 
 
 rospy.spin() #Mantener el nodo activo

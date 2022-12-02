@@ -1,0 +1,16 @@
+1. Primero en el paquete añadimos el paquete actionlib_msgs
+2. Creamos la carpeta action 
+3.Creamos el archivo "MensajeAction.action"
+4. Modificamos el archivo con el siguiente contenido:
+    #Goal
+    ---
+    #Result
+    ---
+    #Feedback
+    
+5.Modificaos el CMakeList.txt:
+    1-Descomentamos add_action_files() y añadimo el nonbre de lso archivos que queremos compilar
+    2-Descomentamos el generate_messages() 
+    3-Descomentamos el catkin_package() 
+
+6. Compilamos el paquete con catkin_make
