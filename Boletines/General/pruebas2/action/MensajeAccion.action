@@ -1,0 +1,8 @@
+#Peticon 
+int32 goal
+---
+#Resultado
+int32 Resultado
+---
+#Feedback
+int32 Feedback

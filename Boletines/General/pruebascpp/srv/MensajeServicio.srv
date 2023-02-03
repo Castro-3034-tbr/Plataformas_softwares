@@ -1,0 +1,5 @@
+#Peticion 
+int32 Peticion
+---
+#Respuesta
+int32 Resultado

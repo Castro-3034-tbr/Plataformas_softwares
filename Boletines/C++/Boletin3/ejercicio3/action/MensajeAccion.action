@@ -1,0 +1,9 @@
+#Goal 
+int32 Tiempo 
+float32 Velocidad
+---
+#Result
+int32 TiempoEfectivo
+---
+#Feedback
+float32 Distancia 

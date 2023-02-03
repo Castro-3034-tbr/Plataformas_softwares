@@ -5,9 +5,9 @@
 class Servidor{
     /*Clase de un servidor de servicios*/
     private:
+        //Creacion de variables privadas
         ros::NodeHandle nh;
         ros::ServiceServer server;
-
 
     public:
         //Creamos el constructor
@@ -18,6 +18,10 @@ class Servidor{
     bool callback(Preueba::MensajeServicioRequest &req, Prueba::MensajeServicioResponse &res){
         /*Función callback del servicio*/
         ROS_INFO("Recibido: %s", req.mensaje.c_str());
+
+        //Enviamos la respuesta
+        res.valor_respuesta = 0;
+        
         return true;
     }
 }

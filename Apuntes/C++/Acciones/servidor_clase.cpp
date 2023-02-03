@@ -15,21 +15,16 @@ class Servidor{
         actionlib::SimpleActionServer<Prueba::MensajeAccionAction> server;
         Prueba::MensajeAccionFeedback feedback;
         Prueba::MensajeAccionResult result;
+        ros::Subscriber sub = nh.subscribe("topic", 1000, &Servidor::Callback, this);
         string accion_name;
 
-    public:
-        //Declaramos el contructor 
-        Servidor(string name): server(nh, name, boost::bind(&Servidor::cbServidor, this , _1) ,false ),accion_name = name{
-            //Inicializamos el servidor
-            servidor.start();
-        }
-    
         void cbServidor(const Prueba::MensajeAccionGoalConstPtr &goal){
             /*Funcion que se ejecuta cuando se pide una accion al servidor */
 
+            //Declaramos valocidad de ciclos 
+            ros::Rate rate(1);
             // FIXME: Accion (Ejemplo)
-            for (int i = 0; i < goal->numero; i++)
-            {
+            for (int i = 0; i < goal->numero; i++){
                 // Comprobamos si se ha cancelado la accion
                 if (server.isPreemptRequested()){
                     ROS_INFO("El cliente ha cancelado la accion");
@@ -40,9 +35,10 @@ class Servidor{
                 // Enviamos el feedback
                 feedback.progreso = 0;
                 server.publishFeedback(feedback);
+                rate.sleep();
             }
 
-            //Enviamos el resultado 
+            // Enviamos el resultado
             result.resultado = 0;
             if (estado == true){
                 server.setSucceeded(result);
@@ -50,7 +46,16 @@ class Servidor{
             else{
                 server.setPreempted(reuslt);
             }
-    }
+        }
+
+    public:
+        //Declaramos el contructor 
+        Servidor(string name): server(nh, name, boost::bind(&Servidor::cbServidor, this , _1) ,false ),accion_name(name){
+            //Inicializamos el servidor
+            servidor.start();
+        }
+    
+
 }
 
 int main(int argc, char ** argv){

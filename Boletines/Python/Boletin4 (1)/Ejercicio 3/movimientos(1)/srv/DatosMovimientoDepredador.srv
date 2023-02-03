@@ -1,0 +1,7 @@
+#Peticion 
+turtlesim/Pose PosePresa
+turtlesim/Pose PoseDepredador
+---
+#Respuesta
+geometry_msgs/Twist VelocidadDepredador
+float32 Distancia

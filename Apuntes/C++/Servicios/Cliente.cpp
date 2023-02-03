@@ -17,14 +17,14 @@ int main(int argc, char **argv){
 
     //Creamos el mensaje
     Servicio::Prueba peticion;
-    peticion.request.valor = 5;
+    peticion.request.valor_peticion = 5;
 
     //Llamamos al servicio
     if(client.call(msg)){
         //Si el servicio se ejecuto correctamente
         ROS_INFO("El servicio finalizo correctamente");
         //
-        ROS_INFO("El resultado es: %d", msg.response.valor_respues);
+        ROS_INFO("El resultado es: %d", msg.response.valor_respuesta);
         return 0
     }
     else{

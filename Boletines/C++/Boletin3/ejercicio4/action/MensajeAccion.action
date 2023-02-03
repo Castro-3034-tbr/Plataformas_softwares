@@ -1,0 +1,9 @@
+#Goal
+int32 Seed 
+int32 Interations
+---
+#Result
+int32 LastNumber
+---
+#Feedback
+int32 PartialResult

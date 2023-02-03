@@ -9,7 +9,7 @@
     #Feedback
     
 5.Modificaos el CMakeList.txt:
-    1-Descomentamos add_action_files() y añadimo el nonbre de lso archivos que queremos compilar
+    1-Descomentamos add_action_files() y añadimo el nonbre de los archivos que queremos compilar
     2-Descomentamos el generate_messages() 
     3-Descomentamos el catkin_package() 
 

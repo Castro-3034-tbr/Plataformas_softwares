@@ -1,0 +1,13 @@
+1- Creamos una carpeta srv
+2- Creamos un archivo "nombre".srv y lo modificamos con el siguiente esquema
+    #Peticion
+    ---
+    #Respuesta
+3- Modificamos el CmakeLsit.txt
+    1. En la funcion find_package añadimos message_generation y añadimos las dependencias del mensaje
+    2. En la funcion add_service_files añadimos el nombre del archivo srv
+    3: Descomentamos la funcion generate_messages
+4- Modificamos el package.xml añadimos las siguientes lineas:
+    <build_depend>message_generation</build_depend>
+    <exec_depend>message_runtime</exec_depend>
+5- Compilamos el paquete 

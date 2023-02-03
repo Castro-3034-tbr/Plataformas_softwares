@@ -1,0 +1,9 @@
+#Goal
+---
+#Result 
+string result
+---
+#Feedback 
+int32 derecha 
+int32 centro
+int32 izquierda

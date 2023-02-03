@@ -21,7 +21,7 @@ void feedbackCB(const Prueba::MensajeAccionFeedbackConstPtr& feedback){
     //Calcelacion de la accion
     if (feedback->progreso == 50){
         ROS_INFO("Cancelando accion");
-        cliente->cancelGoal();
+        cliente->cancelAllGoals();
     }
 }
 
@@ -66,7 +66,7 @@ int main(int argc, char ** argv ){
 
     //Esperamos a que el servidor nos devuelva el resultado
     action::SimpleClientGoalState estado = cliente->getState();
-    while (estado == action::SimpleClientGoalState::PENDING or estado == action::SimpleClientGoalState::ACTIVE){
+    while (estado == actionlib::SimpleClientGoalState::PENDING or estado == actionlib::SimpleClientGoalState::ACTIVE){
         ROS_INFO("El estado del servidor es: %s", estado->toString().c_str());
         estado = cliente->getState();
     }

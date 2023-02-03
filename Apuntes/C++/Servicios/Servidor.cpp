@@ -6,13 +6,11 @@ using namespace std;
 bool callback (Servicio::PruebaRequest &req, Servicio::PruebaResponse &res){
     /*Funcion que se ejecuta cuando llega una peticion al servidor*/
 
-    //Ejemplo 
-    ros::Rate rate(1);
-    for(int i = 0 ; i < req.valor ; i++){
-        ROS_INFO("Esperando %d segundos", i);
-        rate.sleep();
-    }
-    res.valor = req.valor*2;
+    //Ejemplo
+    ROS_INFO("Recibido: %s", req.mensaje.c_str());
+
+    //Enviamos la respuesta
+    res.valores_respuesta = 0
 
     return true;
 }
